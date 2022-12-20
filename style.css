@@ -1,0 +1,57 @@
+body{
+    background-image: url("bg.jpeg");
+    background-attachment: fixed;
+    font-family: 'Rubik Microbe', cursive;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    background: rgb(50,41,200);
+    background: radial-gradient(circle, rgba(50,41,200,1) 0%, rgba(249,110,75,1) 63%, rgba(186,231,177,1) 100%);
+    display: inline-block;
+    border-radius: 30%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: 3s;
+}
+h1:hover{
+    color: rgb(100, 107, 237);
+}
+h2{
+    background-color: aliceblue;
+    border-radius: 40%;
+    left: 40px;
+    text-align: center;
+    background: radial-gradient(circle, rgba(50,41,200,1) 0%, rgba(249,110,75,1) 63%, rgba(186,231,177,1) 100%);
+}
+#game{
+    width: 500px;
+    margin: auto;
+    position: relative;
+}
+#carta{
+    width: 100%;
+}
+#roga{
+    width: 40px;
+    position: absolute;
+    left: 69px;
+    top: 10px;
+    transition: 3s;
+    pointer-events: none;
+}
+#rr{
+    width: 1000px;
+}
+#ee{
+    width: 400px;
+}
+#minion{
+    width: 80px;
+    position: absolute;
+    left: 69px;
+    top: 10px;
+    transition:5s;
+    pointer-events: none;
+}

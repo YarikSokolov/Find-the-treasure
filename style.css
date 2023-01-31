@@ -24,6 +24,8 @@ h2{
     left: 40px;
     text-align: center;
     background: radial-gradient(circle, rgba(50,41,200,1) 0%, rgba(249,110,75,1) 63%, rgba(186,231,177,1) 100%);
+    position: relative;
+    z-index: 999;
 }
 #game{
     width: 500px;
@@ -40,12 +42,7 @@ h2{
     top: 10px;
     transition: 3s;
     pointer-events: none;
-}
-#rr{
-    width: 1000px;
-}
-#ee{
-    width: 400px;
+    
 }
 #minion{
     width: 80px;
@@ -54,4 +51,34 @@ h2{
     top: 10px;
     transition:5s;
     pointer-events: none;
+}
+#yy{
+    color: gold;
+}
+#treasure{
+    transition: 5s;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0) rotate(7200deg);
+}
+.costume{
+    border:4px dashed brown;
+    background-color: rgba(0, 255, 255, 0.356);
+    width: calc(100% / 12);
+    height: 300px;
+    object-fit: contain;
+    /* это свойство нужно, чтобы обводка не делала больше ширину костюма */
+    box-sizing: border-box;
+}
+.activeCostume{
+    background-color: rgba(128, 255, 0, 0.285) !important;
+    transform: scale(1.2);
+}
+.costumes{
+    /* это свойство нужно, чтобы убрать пробелы между костюмами!!! */
+    font-size: 0;
 }

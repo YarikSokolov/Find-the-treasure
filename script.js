@@ -6,7 +6,15 @@ let cartaX=Math.random()*500
 let cartaY=Math.random()*500
 let shagi=0
 let massiv=[]
+let treasure=document.getElementById("treasure")
+let activeCostume=6
 console.log(cartaX,cartaY);
+document.body.onkeydown=function (event) {
+    console.log(event.keyCode);
+}
+
+
+
 carta.onclick=function(event){
     console.log("1vratartop",event.offsetX);
     shagi=shagi+1
@@ -28,13 +36,13 @@ carta.onclick=function(event){
     if (distance<11) {
         title.innerHTML="🎉🎉🎉victory!!!🎉🎉🎉      ТЫ нашел сокровище за "+shagi+" шагов"
     carta.style.pointerEvents="none"
-        
+        treasure.style.transform="scale(1) rotate(0)"
     }
     else if(distance<20){
         title.innerHTML=" ТЫ близко МАЛЕНЬКАЯ КИСКА👺👺👺👺"
     }
     else if(distance<45){
-        title.innerHTML="сокровище через 45! МЕТРОВ🎁🎁🎁🎁🎁🎁🎁🎁🎁"
+        title.innerHTML="сокровище через 45! МЕТРОВ🎁🎁🎁🎁🎁🎁🎁🎁"
     }
     else if(distance<80){
         title.innerHTML="ПОДАЛЬШЕ ИДИ В ПРАВАЛЕВО💩💩💩"
@@ -55,11 +63,16 @@ carta.onclick=function(event){
         title.innerHTML="💩💩💩ВСЕ ОЧЕНЬ ДАЛЕКО💩💩💩"
     }
 }
-
-
-
-
-
+treasure.onclick=function (event) {
+    treasure.style.transform="scale(0) rotate(7200deg)"
+    carta.style.pointerEvents="auto"
+    geroy.style.left="69px"
+    geroy.style.top="10px"
+    title.innerHTML="неудачи тебе✔✔✔✔✔✔"
+    cartaX=Math.random()*500
+    cartaY=Math.random()*500
+    shagi=0
+}
 
 
 

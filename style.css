@@ -21,11 +21,11 @@ h1:hover{
 h2{
     background-color: aliceblue;
     border-radius: 40%;
-    left: 40px;
     text-align: center;
     background: radial-gradient(circle, rgba(50,41,200,1) 0%, rgba(249,110,75,1) 63%, rgba(186,231,177,1) 100%);
     position: relative;
-    z-index: 999;
+    z-index: 9;
+    word-break: break-all;
 }
 #game{
     width: 500px;
@@ -73,6 +73,7 @@ h2{
     object-fit: contain;
     /* это свойство нужно, чтобы обводка не делала больше ширину костюма */
     box-sizing: border-box;
+    transition: 1s;
 }
 .activeCostume{
     background-color: rgba(128, 255, 0, 0.285) !important;
@@ -81,4 +82,46 @@ h2{
 .costumes{
     /* это свойство нужно, чтобы убрать пробелы между костюмами!!! */
     font-size: 0;
+    /* margin-bottom: 100px; */
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#shop{
+    background-color: rgba(100, 148, 237, 0.349);
+    position: fixed;
+    top: 0;
+    z-index:10 ;
+    height: 100%;
+    left: 0;
+    backdrop-filter: blur(7px);
+    width: 100%;
+    transition: 7s;
+}
+#VZRYV{
+    transition: 0.3s;
+    z-index: 15;
+    position: fixed;
+    height: 100%;
+    top: 1px;
+    width: 100%;
+    left: 0;
+    object-fit: contain;
+    pointer-events: none;
+    opacity: 0 ;
+}
+#shopButton{
+    border-radius: 34px;
+    background-color: aliceblue;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    width: 200px;
+    line-height: 50px;
+    font-size: 22px;
+    border: 5px solid firebrick;
+}
+#cursor{
+    position: fixed;
 }

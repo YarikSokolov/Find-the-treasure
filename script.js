@@ -25,6 +25,7 @@ let images = [
 ]
 let costumes = document.getElementsByClassName("costume")
 let cursor = document.getElementById("cursor")
+let shopButton = document.getElementById("shopButton")
 console.log(cartaX, cartaY);
 document.body.onkeydown = function (event) {
     console.log(event.keyCode);
@@ -58,8 +59,8 @@ document.body.onkeydown = function (event) {
 }
 document.body.onmousemove = function (event) {
     console.log(event.offsetX,event.offsetY);
-    cursor.style.left=event.offsetX+"px"
-    cursor.style.top=event.offsetY+"px"
+    cursor.style.left=event.clientX-5+"px"
+    cursor.style.top=event.clientY-5+"px"
 }
 
 
@@ -140,4 +141,8 @@ setTimeout(function () {
 setTimeout(function () {
     VZRYV.style.opacity=0
 },8000)
+}
+shopButton.onclick = function (event) {
+    console.log("shop is opening now!");
+    shop.style.transform="scale(1) rotate(14400deg)"
 }
